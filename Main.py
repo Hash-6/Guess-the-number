@@ -1,14 +1,20 @@
-# MADE BY HASH6
 import random
+
 max_guesses = 5
 guesses = 0
 number = random.randint(1, 100)
+
 while guesses < max_guesses:
-    guess = int(input("guess the number: "))
+    guess = input("Guess the number: ")
+    if not guess.isnumeric():
+        print("Enter a number!")
+        continue
+    guess = int(guess)
     if number == guess:
-        print("Congratulations! You guessed the number.")
+        print(f"Congratulations! You guessed the number in {guesses + 1} guesses.")
+        print("Say a number!")
         break
-    elif number > guess:
+    if number > guess:
         print("The number is bigger!")
     else:
         print("The number is smaller!")
