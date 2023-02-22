@@ -1,7 +1,8 @@
-text = input("Would you like to have a unlimted amout of guesses and be given a score the the end or there be a limit of five guesses? Say limit or unlimited ").lower()
-if text == "limit".lower():
+text = input("Would you like to have unlimited guesses and be given a score at the end or have a limit of five guesses? Say 'unlimited' or 'limited' ").lower()
+
+if text == "limited":
   import mode1
-if text == "unlimited".lower():
+elif text == "unlimited":
   import mode2
 else:
-  print("Say limit or unlimited")
+  print("Please say 'limit' or 'unlimited'") 

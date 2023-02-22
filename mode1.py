@@ -1,6 +1,6 @@
 import random
 
-max_guesses = 5
+max_guesses = int(input("Enter the maximum number of guesses: "))
 guesses = 0
 number = random.randint(1, 100)
 
